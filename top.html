@@ -1,0 +1,47 @@
+<html>
+<head>
+<title> My Beauty Nail</title>
+<style>
+    	<!--
+        	A:link { text-decoration:none;}
+        	A:visited { text-decoration:none;}
+        	A:active { text-decoration:none;}
+    	-->
+</style>
+</head>
+<body>
+<table width=900 border=1 cellspacing=0 cellpadding=0>
+<tr height=70> 
+  <td width=900 align=center><h1>My Beauty Nail</td>
+</tr>
+<tr> 
+  <td bgcolor=black>
+<table width=900 border=0 cellspacing=0 cellpadding=0>
+	<tr height=30>
+	<td width=170 align=center valign=center><font color=white><b>070-1234-1234</b></font></td>
+         <td width=50>&nbsp;</td>
+         <td width=100 align=center><a href=p-list.php?class=1><font color=white style='font-size:12pt;' onMouseover="this.style.color='green'" onMouseout="this.style.color='white'"><b>기초네일</b></font></a></td>
+         <td width=20 align=center><font color=white>|</font></td>
+         <td width=100 align=center><a href=p-list.php?class=2><font color=white style='font-size:12pt;' onMouseover="this.style.color='green'" onMouseout="this.style.color='white'"><b>컬러네일</b></font></a></td>
+         <td width=20 align=center><font color=white>|</font></td>
+         <td width=100 align=center><a href=p-list.php?class=3><font color=white style='font-size:12pt;' onMouseover="this.style.color='green'" onMouseout="this.style.color='white'"><b>네일도구</b></font></a></td>
+         <td width=20 align=center><font color=white>|</font></td>
+         <td width=100 align=center><a href=show.php?board=customer><font color=white style='font-size:12pt;' onMouseover="this.style.color='green'" onMouseout="this.style.color='white'"><b>고객게시판</b></font></a></td>
+         <td width=20 align=center><font color=white>|</font></td>
+			   
+  
+<? 
+if ($UserID == "admin") {     // 관리자로 로그인 한 경우 [관리메뉴] 표시
+     echo ("<td width=100 align=center><a href=admin.php><font color=white style='font-size:12pt;' onMouseover=\"this.style.color='green'\" onMouseout=\"this.style.color='white'\"><b>관리메뉴</b></font></a></td>");   
+} else {     // 로그인 안했거나 일반 사용자로 로그인 한 경우 [쇼핑카트] 표시
+      echo ("<td width=100 align=center><a href=showbag.php><font color=white style='font-size:12pt;’ onMouseover=\"this.style.color='green'\" onMouseout=\"this.style.color='white'\"><b>쇼핑카트</b></font></a></td>");   
+    } 
+?>			
+	    <td width=100>&nbsp;</td>
+          </tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

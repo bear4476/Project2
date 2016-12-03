@@ -1,0 +1,29 @@
+<? if (!$UserID) { ?>
+
+<table width=170 cellspacing=0 cellpadding=0 border=1   align=center>
+<tr><td>
+<form method=post action=login.php onsubmit="if(!this.uid.value || !this.upass.value)   return false;">
+<table border=0 width=170>
+      <tr><td align=right>ID: </td><td><input type=text size=12 name=uid></td></tr>
+<tr><td align=right>PW: </td><td><input type=password size=12   name=upass></td></tr>
+<tr><td colspan=2 align=center><input type=submit value=로그인></td></tr>
+</form>
+</table>
+</td></tr>
+</table>
+
+<table width=170 cellspacing=0 cellpadding=0 border=0   align=center>
+<tr><td align=center><a href=join.html>회원등록</a>|<a   href=findidpw.php>비번분실</a></td></tr>
+</table>
+
+<? } else { ?>
+
+<table width=170 cellspacing=0 cellpadding=0 border=1 align=center>
+<tr height=85><td align=center><? echo $UserName; ?>님 반갑습니다</td></tr>
+</table>
+
+<table width=170 cellspacing=0 cellpadding=0 border=0 align=center>
+<tr><td align=center><a href=mypage.php>My 페이지</a>|<a   href=logout.php>로그아웃</a></td></tr>
+</table>
+
+<? } ?>
